@@ -4,22 +4,25 @@ module Modularity
   class Inflector
     class << self
 
-      # File activesupport/lib/active_support/inflector.rb, line 160
+      # File activesupport/lib/active_support/inflector.rb, line 178
       def camelize(lower_case_and_underscored_word, first_letter_in_uppercase = true)
         if first_letter_in_uppercase
           lower_case_and_underscored_word.to_s.gsub(/\/(.?)/) { "::#{$1.upcase}" }.gsub(/(?:^|_)(.)/) { $1.upcase }
         else
-          lower_case_and_underscored_word.first + camelize(lower_case_and_underscored_word)[1..-1]
+          lower_case_and_underscored_word.first.downcase + camelize(lower_case_and_underscored_word)[1..-1]
         end
       end
 
-      # File activesupport/lib/active_support/inflector.rb, line 278
+      # File activesupport/lib/active_support/inflector.rb, line 355
       def constantize(camel_cased_word)
-        unless /\A(?:::)?([A-Z]\w*(?:::[A-Z]\w*)*)\z/ =~ camel_cased_word
-          raise NameError, "#{camel_cased_word.inspect} is not a valid constant name!"
-        end
+        names = camel_cased_word.split('::')
+        names.shift if names.empty? || names.first.empty?
 
-        Object.module_eval("::#{$1}", __FILE__, __LINE__)
+        constant = Object
+        names.each do |name|
+          constant = constant.const_defined?(name) ? constant.const_get(name) : constant.const_missing(name)
+        end
+        constant
       end
 
     end
