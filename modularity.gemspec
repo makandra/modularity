@@ -16,7 +16,20 @@ Gem::Specification.new do |s|
     "README.rdoc"
   ]
   s.files = [
-    "VERSION"
+    "MIT-LICENSE",
+     "README.rdoc",
+     "Rakefile",
+     "VERSION",
+     "lib/modularity.rb",
+     "lib/modularity/as_trait.rb",
+     "lib/modularity/does.rb",
+     "lib/modularity/inflector.rb",
+     "modularity.gemspec",
+     "spec/as_trait_spec.rb",
+     "spec/does_spec.rb",
+     "spec/rcov.opts",
+     "spec/spec.opts",
+     "spec/spec_helper.rb"
   ]
   s.homepage = %q{http://github.com/makandra/modularity}
   s.rdoc_options = ["--charset=UTF-8"]
