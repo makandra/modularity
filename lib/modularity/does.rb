@@ -1,5 +1,5 @@
-require 'modularity/as_trait'
 require 'modularity/inflector'
+require 'modularity/as_trait'
 
 module Modularity
   module Does
@@ -10,10 +10,9 @@ module Modularity
     
     module ClassMethods
       def does(trait_name, *args)
-        trait_name = Modularity::Inflector.camelize(trait_name.to_s)
+        trait_name = "#{Modularity::Inflector.camelize(trait_name.to_s)}Trait"
         trait = Modularity::Inflector.constantize(trait_name)
-        include(trait)
-        macro = trait.instance_variable_get("@as_trait") or raise "Missing as_trait directive in #{trait_name}"
+        macro = trait.instance_variable_get("@trait_macro") or raise "Missing trait directive in #{trait_name}"
         class_exec(*args, &macro)
       end
     end

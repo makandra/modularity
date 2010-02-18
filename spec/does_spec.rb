@@ -1,20 +1,26 @@
 require File.dirname(__FILE__) + '/spec_helper'
 
-module Trait
-  as_trait {}
+module SomeTrait
+  as_trait do
+    some_trait_included
+  end
 end
 
-module Trait::Child
-  as_trait {}
+module Some
+  module ChildTrait
+    as_trait do
+      some_child_trait_included
+    end
+  end
 end
 
-module CallMethod
+module CallMethodTrait
   as_trait do |field|
     send(field)
   end
 end
 
-module Visibility
+module VisibilityTrait
   as_trait do
     def public_method_from_trait
     end
@@ -27,7 +33,7 @@ module Visibility
   end
 end
 
-module DefineConstantMethod
+module DefineConstantMethodTrait
   as_trait do |name, return_value|
     define_method name do
       return_value
@@ -42,17 +48,17 @@ describe Modularity::AsTrait do
 
   describe 'does' do
   
-    it "should include the named module" do
-      Doer.should_receive(:include).with(Trait)
+    it "should apply the named module" do
+      Doer.should_receive(:some_trait_included)
       Doer.class_eval do
-        does "trait"
+        does "some"
       end
     end
     
-    it "should include a namespaced module, using slash-notation like require" do
-      Doer.should_receive(:include).with(Trait::Child)
+    it "should apply a namespaced module, using slash-notation like require" do
+      Doer.should_receive(:some_child_trait_included)
       Doer.class_eval do
-        does "trait/child"
+        does "some/child"
       end
     end
     

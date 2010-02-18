@@ -1,11 +1,12 @@
 = modularity - Traits and partial classes for Ruby
 
-Traits are to your models what partials are to your Rails views.
-
-Modularity lets you organize large models into multiple source files.
+Modularity provides traits and partial classes for Ruby.
+This lets you organize large models into multiple source files.
 It also allows very simple definition of meta-programming macros,
 as you might now from <tt>acts_as_something</tt> type of plugins,
 or the macros Rails provides for your models.
+
+Modularity traits are to your models what partials are for your Rails views.
 
 == Example 1: Splitting a model into multiple source files
 
@@ -13,21 +14,21 @@ Models are often concerned with multiple themes like "authentication", "contact 
 a couple of validations and callbacks here, and some method there. Modularity lets you organize your model into multiple
 partial classes, so each file can deal with a single aspect of your model:
 
-  # app/model/user.rb
+  # app/models/user.rb
   class User < ActiveRecord::Base
     does "user/authentication"
     does "user/address"
   end
   
-  # app/model/user/authentication.rb
-  module User::Authentication
+  # app/models/user/authentication_trait.rb
+  module User::AuthenticationTrait
     as_trait do
       # methods, validations, etc. regarding usernames and passwords go here
     end
   end
   
-  # app/model/user/permissions.rb
-  module User::Permissions
+  # app/models/user/permissions_trait.rb
+  module User::PermissionsTrait
     as_trait do
       # methods, validations, etc. regarding contact information go here
     end
@@ -44,13 +45,13 @@ application, allowing you to express your application domain in both classes and
 
 Here is an example of a <tt>strip_field</tt> macro, which created setter methods that remove leading and trailing whitespace from newly assigned values:
 
-  # app/model/article.rb
+  # app/models/article.rb
   class Article
     does "strip_fields", :name, :brand
   end
 
-  # app/model/shared/strip_fields.rb
-  module StripFields
+  # app/models/shared/strip_fields_trait.rb
+  module StripFieldsTrait
     as_trait do |*fields|
       fields.each do |field|
         define_method("#{field}=") do |value|
@@ -68,13 +69,13 @@ that are re-used from multiple classes.
 Using a module to add both instance methods and class methods is {very awkward}[http://redcorundum.blogspot.com/2006/06/mixing-in-class-methods.html].
 Modularity does away with the clutter and lets you say this:
 
-  # app/model/model.rb
+  # app/models/model.rb
   class Model
     does "mixin"
   end
 
-  # app/model/mixin.rb
-  module Mixins
+  # app/models/mixin_trait.rb
+  module MixinTrait
     as_trait do
       def instance_method
         # ...
@@ -90,6 +91,11 @@ Modularity does away with the clutter and lets you say this:
 
   sudo gem sources -a http://gemcutter.org
   sudo gem install modularity
+  
+== Dependencies
+
+Modularity requires Ruby 1.8.7. Earlier versions are missing <tt>class_exec</tt>. You might be able to hack in <tt>class_exec</tt>
+using {this}[http://github.com/brynary/rspec/blob/f80d61a399b34f58084a378c85a43a95ff484619/lib/spec/extensions/instance_exec.rb] as a guide, but it's not pretty.
 
 == Credits
 
