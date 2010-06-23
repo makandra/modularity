@@ -89,10 +89,10 @@ Modularity does away with the clutter and lets you say this:
 
 == Installation
 
-  sudo gem sources -a http://gemcutter.org
-  sudo gem install modularity
+    sudo gem install modularity
+
   
-== Dependencies
+== Note if you're still on Ruby 1.8.6
 
 Modularity requires Ruby 1.8.7. Earlier versions are missing <tt>class_exec</tt>. You might be able to hack in <tt>class_exec</tt>
 using {this}[http://github.com/brynary/rspec/blob/f80d61a399b34f58084a378c85a43a95ff484619/lib/spec/extensions/instance_exec.rb] as a guide, but it's not pretty.
