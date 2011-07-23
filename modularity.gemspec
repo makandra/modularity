@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{modularity}
-  s.version = "0.5.0"
+  s.version = "0.6.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Henning Koch"]
-  s.date = %q{2010-02-15}
+  s.date = %q{2010-02-18}
   s.description = %q{Traits and partial classes for Ruby}
   s.email = %q{github@makandra.de}
   s.extra_rdoc_files = [
