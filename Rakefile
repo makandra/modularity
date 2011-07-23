@@ -2,6 +2,7 @@ require 'rake'
 # require 'rake/testtask'
 require 'rake/rdoctask'
 require 'spec/rake/spectask'
+require 'bundler/gem_tasks'
 
 desc 'Default: Run all specs.'
 task :default => :spec
@@ -20,18 +21,3 @@ Rake::RDocTask.new(:rdoc) do |rdoc|
   rdoc.rdoc_files.include('README')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
-
-begin
-  require 'jeweler'
-  Jeweler::Tasks.new do |gemspec|
-    gemspec.name = "modularity"
-    gemspec.summary = "Traits and partial classes for Ruby"
-    gemspec.email = "github@makandra.de"
-    gemspec.homepage = "http://github.com/makandra/modularity"
-    gemspec.description = "Traits and partial classes for Ruby"
-    gemspec.authors = ["Henning Koch"]
-  end
-rescue LoadError
-  puts "Jeweler not available. Install it with: sudo gem install technicalpickles-jeweler -s http://gems.github.com"
-end
-
