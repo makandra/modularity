@@ -8,36 +8,10 @@ or the macros Rails provides for your models.
 
 Modularity traits are to your models what partials are for your Rails views.
 
-== Example 1: Splitting a model into multiple source files
-
-Models are often concerned with multiple themes like "authentication", "contact info" or "permissions", each requiring
-a couple of validations and callbacks here, and some method there. Modularity lets you organize your model into multiple
-partial classes, so each file can deal with a single aspect of your model:
-
-  # app/models/user.rb
-  class User < ActiveRecord::Base
-    does "user/authentication"
-    does "user/address"
-  end
-  
-  # app/models/user/authentication_trait.rb
-  module User::AuthenticationTrait
-    as_trait do
-      # methods, validations, etc. regarding usernames and passwords go here
-    end
-  end
-  
-  # app/models/user/permissions_trait.rb
-  module User::PermissionsTrait
-    as_trait do
-      # methods, validations, etc. regarding contact information go here
-    end
-  end
-
-== Example 2: Easy meta-programming macros
+== Example 1: Easy meta-programming macros
 
 Ruby allows you to construct classes using meta-programming macros like <tt>acts_as_tree</tt> or <tt>has_many :items</tt>.
-These macros will add methods, callbacks, etc. to the calling class. Hoever, right now Ruby (and Rails) makes it awkward to define
+These macros will add methods, callbacks, etc. to the calling class. However, right now Ruby (and Rails) makes it awkward to define
 such macros in your project as part of your application domain.
 
 Modularity allows you to extract common behaviour into reusable macros by defining traits with parameters. Your macros can live in your
@@ -64,7 +38,7 @@ Here is an example of a <tt>strip_field</tt> macro, which created setter methods
 We like to add <tt>app/models/shared</tt> and <tt>app/controllers/shared</tt> to the load paths of our Rails projects. These are great places to store macros
 that are re-used from multiple classes.
 
-== Example 3: Mixins with class methods
+== Example 2: Mixins with class methods
 
 Using a module to add both instance methods and class methods is {very awkward}[http://redcorundum.blogspot.com/2006/06/mixing-in-class-methods.html].
 Modularity does away with the clutter and lets you say this:
@@ -86,6 +60,32 @@ Modularity does away with the clutter and lets you say this:
   end
   
 <tt>private</tt> and <tt>protected</tt> will also work as expected when defining a trait.
+
+== Example 3: Splitting a model into multiple source files
+
+Models are often concerned with multiple themes like "authentication", "contact info" or "permissions", each requiring
+a couple of validations and callbacks here, and some method there. Modularity lets you organize your model into multiple
+partial classes, so each file can deal with a single aspect of your model:
+
+  # app/models/user.rb
+  class User < ActiveRecord::Base
+    does "user/authentication"
+    does "user/address"
+  end
+
+  # app/models/user/authentication_trait.rb
+  module User::AuthenticationTrait
+    as_trait do
+      # methods, validations, etc. regarding usernames and passwords go here
+    end
+  end
+
+  # app/models/user/permissions_trait.rb
+  module User::PermissionsTrait
+    as_trait do
+      # methods, validations, etc. regarding contact information go here
+    end
+  end
 
 == Installation
 
