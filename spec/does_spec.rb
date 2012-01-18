@@ -1,4 +1,4 @@
-require File.dirname(__FILE__) + '/spec_helper'
+require 'spec_helper'
 
 module SomeTrait
   as_trait do
@@ -74,9 +74,9 @@ describe Modularity::AsTrait do
         does "visibility"
       end
       instance = Doer.new
-      instance.public_methods.should include("public_method_from_trait")
-      instance.protected_methods.should include("protected_method_from_trait")
-      instance.private_methods.should include("private_method_from_trait")
+      instance.public_methods.collect(&:to_s).should include("public_method_from_trait")
+      instance.protected_methods.collect(&:to_s).should include("protected_method_from_trait")
+      instance.private_methods.collect(&:to_s).should include("private_method_from_trait")
     end
     
     it "should allow the trait to perform metaprogramming acrobatics" do
