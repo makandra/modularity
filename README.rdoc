@@ -1,10 +1,11 @@
 = modularity - Traits and partial classes for Ruby
 
 Modularity provides traits and partial classes for Ruby.
-This lets you organize large models into multiple source files.
-It also allows very simple definition of meta-programming macros,
+This allows very simple definition of meta-programming macros,
 as you might now from <tt>acts_as_something</tt> type of plugins,
-or the macros Rails provides for your models.
+or the macros Rails provides for your models. This also lets you organize
+large models into multiple source files in a way that is less awkward
+than using modules.
 
 Modularity traits are to your models what partials are for your Rails views.
 
