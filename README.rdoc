@@ -58,6 +58,7 @@ Modularity does away with the clutter and lets you say this:
       def self.class_method
         # ..
       end
+    end
   end
   
 <tt>private</tt> and <tt>protected</tt> will also work as expected when defining a trait.
