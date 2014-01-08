@@ -112,7 +112,33 @@ to decompose a huge Ruby class.
 Installation
 ------------
 
-    sudo gem install modularity
+Add the following to your `Gemfile`:
+
+    gem 'modularity', '>=2'
+
+Now run `bundle install`.
+
+
+Migrating from Modularity 1
+---------------------------
+
+If you have been using Modularity 1 with the `does` syntax, we provide a script to migrate your Ruby project
+automatically.
+
+1. Make sure your project has tests and you have a backup of your files (or pushed your commits to Git)
+
+2. From your project directory, do this:
+
+        find . -name "*.rb" | migrate-modularity1-to-modularity2
+
+3. The script will rename your files and change your code. It will also syntax-check your files after conversion
+   (since the script is not perfect).
+
+4. Check the diff to see what the script has done.
+
+5. Run tests to see if everything still works.
+
+
 
 
 Credits
