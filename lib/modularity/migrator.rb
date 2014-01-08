@@ -1,16 +1,20 @@
 gem 'activesupport'
 require 'active_support/all'
+require 'fileutils'
 
 module Modularity
   class Migrator
     class << self
 
       def migrate(old_path)
+        old_path = File.expand_path(old_path)
         new_path = fix_filename(old_path)
         rename(old_path, new_path) unless old_path == new_path
         old_code = File.read(new_path)
         new_code = fix_code(old_code)
-        rewrite_file(new_path, new_code) unless old_path == new_path
+        rewrite_file(new_path, new_code) unless old_code == new_code
+        puts "Migrated #{old_path}"
+        `ruby -c #{new_path}`
         new_code
       end
 
@@ -37,7 +41,7 @@ module Modularity
       end
 
       def rename(old, new)
-        FileUtils.mv(old, enw)
+        FileUtils.mv(old, new)
       end
 
       def rewrite_file(path, content)
