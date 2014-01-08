@@ -96,6 +96,34 @@ describe Modularity::AsTrait do
 
       end
 
+      it 'applies multiple trait macros' do
+
+        module FirstTrait
+          as_trait do
+            define_method :first do
+            end
+          end
+        end
+
+        module SecondTrait
+          as_trait do
+            define_method :second do
+            end
+          end
+        end
+
+        @doing_class.class_eval do
+          include FirstTrait
+          include SecondTrait
+        end
+
+        instance = @doing_class.new
+
+        instance.should respond_to(:first)
+        instance.should respond_to(:second)
+
+      end
+
     end
 
     describe "with parameters" do
