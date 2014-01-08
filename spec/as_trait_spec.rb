@@ -71,6 +71,31 @@ describe Modularity::AsTrait do
 
       end
 
+      it 'appends methods outside the trait macro' do
+
+        module HybridModule
+
+          as_trait do
+            define_method :trait_method do
+            end
+          end
+
+          def vanilla_method
+          end
+
+        end
+
+        @doing_class.class_eval do
+          include HybridModule
+        end
+
+        instance = @doing_class.new
+
+        instance.should respond_to(:trait_method)
+        instance.should respond_to(:vanilla_method)
+
+      end
+
     end
 
     describe "with parameters" do
@@ -107,6 +132,47 @@ describe Modularity::AsTrait do
         instance = @doing_class.new
         instance.should respond_to(:some_method)
         instance.some_method.should == "some_return_value"
+      end
+
+      it "allies to call an unparametrized trait macro with an empty parameter list" do
+
+        module DoesSome
+          as_trait do
+            some_trait_included
+          end
+        end
+
+        @doing_class.should_receive(:some_trait_included)
+
+        @doing_class.class_eval do
+          include DoesSome[]
+        end
+
+      end
+
+      it 'appends methods outside the trait macro' do
+
+        module HybridModuleWithParameters
+
+          as_trait do |name|
+            define_method name do
+            end
+          end
+
+          def vanilla_method
+          end
+
+        end
+
+        @doing_class.class_eval do
+          include HybridModuleWithParameters[:trait_method]
+        end
+
+        instance = @doing_class.new
+
+        instance.should respond_to(:trait_method)
+        instance.should respond_to(:vanilla_method)
+
       end
 
     end
