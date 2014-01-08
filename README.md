@@ -42,7 +42,9 @@ Here is an example of a `strip_field` macro, which created setter methods that r
         end
       end
     end
-  
+
+Notice the `as_trait` block.
+
 We like to add `app/models/shared` and `app/controllers/shared` to the load paths of our Rails projects.
 These are great places to store macros that are re-used from multiple classes.
 
@@ -84,7 +86,7 @@ partial classes, so each file can deal with a single aspect of your model:
     # app/models/user.rb
     class User < ActiveRecord::Base
       include User::DoesAuthentication
-      include User::DoesAddress
+      include User::DoesPermissions
     end
 
     # app/models/user/does_authentication.rb
