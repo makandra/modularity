@@ -1,2 +1,1 @@
-require 'modularity/does'
-
+require 'modularity/as_trait'
