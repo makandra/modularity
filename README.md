@@ -28,7 +28,7 @@ and macros.
 Here is an example of a `strip_field` macro, which created setter methods that remove leading and trailing whitespace from newly assigned values:
 
     # app/models/article.rb
-    class Article
+    class Article < ActiveRecord::Base
       include DoesStripFields[:name, :brand]
     end
 
@@ -85,8 +85,8 @@ partial classes, so each file can deal with a single aspect of your model:
 
     # app/models/user.rb
     class User < ActiveRecord::Base
-      include User::DoesAuthentication
-      include User::DoesPermissions
+      include DoesAuthentication
+      include DoesPermissions
     end
 
     # app/models/user/does_authentication.rb
