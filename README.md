@@ -1,7 +1,7 @@
 Modularity 2 - Traits and partial classes for Ruby
 ==================================================
 
-Modularity enhances Ruby's [`Module`] so it can be used traits and partial classes.
+Modularity enhances Ruby's [`Module`](http://apidock.com/ruby/Module) so it can be used traits and partial classes.
 This allows very simple definition of meta-programming macros like the
 `has_many` that you know from Rails.
 
