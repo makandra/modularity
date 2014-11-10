@@ -5,6 +5,7 @@ require 'modularity/version'
 Gem::Specification.new do |s|
   s.name = %q{modularity}
   s.version = Modularity::VERSION
+  s.licenses = ["MIT"]
   s.authors = ["Henning Koch"]
   s.email = %q{github@makandra.de}
   s.homepage = %q{http://github.com/makandra/modularity}
