@@ -37,14 +37,14 @@ module Modularity
         unless base.is_a?(ParametrizedTrait)
           base.class_exec(&@modularity_macro)
         end
-        
+
       end
 
       def self.[](*args)
         blank_trait = self
         ParametrizedTrait.new(blank_trait, args)
       end
-      
+
     end
   end
 end
