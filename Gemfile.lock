@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    modularity (2.0.1)
+    modularity (3.0.0)
 
 GEM
   remote: http://rubygems.org/
@@ -44,4 +44,4 @@ DEPENDENCIES
   rspec
 
 BUNDLED WITH
-   2.2.22
+   2.2.26
