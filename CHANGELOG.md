@@ -10,4 +10,5 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 - Removed migration guide for modularity version 1.
 
 ### Compatible changes
-- This CHANGELOG file.
+
+- Added this CHANGELOG file.

@@ -1,4 +1,6 @@
-$: << File.join(File.dirname(__FILE__), "/../lib" )
+require 'modularity'
 
-require "#{File.dirname(__FILE__)}/../lib/modularity"
-require 'rspec_candy/all'
+RSpec.configure do |config|
+  config.expect_with(:rspec) { |expects| expects.syntax = :should }
+  config.mock_with(:rspec) { |mocks| mocks.syntax = [:should, :receive] }
+end
