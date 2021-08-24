@@ -1,8 +1,5 @@
 require 'bundler/gem_tasks'
-require 'rspec/core/rake_task'
+require 'bundler/setup'
+require 'gemika/tasks'
 
-RSpec::Core::RakeTask.new(:spec) do |task|
-  task.verbose = false
-end
-
-task default: :spec
+task default: 'matrix:spec'

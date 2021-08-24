@@ -1,0 +1,36 @@
+---
+name: Tests
+'on':
+  push:
+    branches:
+    - master
+  pull_request:
+    branches:
+    - master
+jobs:
+  test:
+    runs-on: ubuntu-20.04
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+        - ruby: 2.5.7
+          gemfile: Gemfile
+        - ruby: 2.7.4
+          gemfile: Gemfile
+        - ruby: 3.0.2
+          gemfile: Gemfile
+    env:
+      BUNDLE_GEMFILE: "${{ matrix.gemfile }}"
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: "${{ matrix.ruby }}"
+    - name: Bundle
+      run: |
+        gem install bundler:2.2.22
+        bundle install --no-deployment
+    - name: Run tests
+      run: bundle exec rspec

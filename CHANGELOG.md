@@ -8,6 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 ### Breaking changes
 
 - Removed migration guide for modularity version 1.
+- Removed support for Ruby < `2.5.0`.
 
 ### Compatible changes
 

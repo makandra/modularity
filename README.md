@@ -1,3 +1,5 @@
+[![Tests](https://github.com/makandra/modularity/workflows/Tests/badge.svg)](https://github.com/makandra/modularity/actions)
+
 # Modularity 2 - Traits and partial classes for Ruby
 
 Modularity enhances Ruby's [`Module`](http://apidock.com/ruby/Module) so it can be used traits and partial classes.
@@ -114,6 +116,12 @@ have one giant model with many side effects.
 
 There are [many better ways](http://blog.codeclimate.com/blog/2012/10/17/7-ways-to-decompose-fat-activerecord-models/)
 to decompose a huge Ruby class.
+
+## Development
+
+* Install Bundler 2 `gem install bundler:2.2.22` and run `bundle install` to have a working development setup.
+* Running tests for the current Ruby version: `bundle exec rake`
+* Running tests for all supported Ruby version: Push the changes to Github in a feature branch, open a merge request and have a look at the test matrix in Github actions
 
 ## Credits
 
