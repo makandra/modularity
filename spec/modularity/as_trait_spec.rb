@@ -201,6 +201,35 @@ describe Modularity::AsTrait do
 
       end
 
+      it 'passes keyword args to the block given to as_trait' do
+
+        module ModuleWithKeywordArgs
+          as_trait do |hash, required_kwarg:, optional_kwarg: 'foo'|
+            define_method :passed_hash do
+              hash
+            end
+
+            define_method :required_keyword do
+              required_kwarg
+            end
+
+            define_method :optional_keyword do
+              optional_kwarg
+            end
+
+          end
+        end
+
+        @doing_class.class_eval do
+          include ModuleWithKeywordArgs[{ first_hash_key: 'value_one', second_hash_key: 'value_two' }, required_kwarg: 'bar']
+        end
+
+        instance = @doing_class.new
+        instance.passed_hash.should eq({ first_hash_key: 'value_one', second_hash_key: 'value_two' })
+        instance.required_keyword.should eq('bar')
+        instance.optional_keyword.should eq('foo')
+      end
+
     end
 
   end

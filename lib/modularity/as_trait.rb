@@ -2,14 +2,19 @@ module Modularity
 
   class ParametrizedTrait < Module
 
-    def initialize(blank_trait, args)
+    def initialize(blank_trait, args, kwargs)
       @args = args
+      @kwargs = kwargs
       @macro = blank_trait.instance_variable_get(:@modularity_macro)
       include(blank_trait)
     end
 
     def included(base)
-      base.class_exec(*@args, &@macro)
+      if Gem::Version.new(RUBY_VERSION) < Gem::Version.new('2.7')
+        base.class_exec(*@args, &@macro)
+      else
+        base.class_exec(*@args, **@kwargs, &@macro)
+      end
     end
 
   end
@@ -27,9 +32,16 @@ module Modularity
 
       end
 
-      def self.[](*args)
-        blank_trait = self
-        ParametrizedTrait.new(blank_trait, args)
+      if Gem::Version.new(RUBY_VERSION) < Gem::Version.new('2.7')
+        def self.[](*args)
+          blank_trait = self
+          ParametrizedTrait.new(blank_trait, args, {})
+        end
+      else
+        def self.[](*args, **kwargs)
+          blank_trait = self
+          ParametrizedTrait.new(blank_trait, args, kwargs)
+        end
       end
 
     end

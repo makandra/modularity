@@ -16,9 +16,13 @@ jobs:
         include:
         - ruby: 2.5.7
           gemfile: Gemfile
+        - ruby: 2.6.10
+          gemfile: Gemfile
         - ruby: 2.7.4
           gemfile: Gemfile
         - ruby: 3.0.2
+          gemfile: Gemfile
+        - ruby: 3.1.2
           gemfile: Gemfile
     env:
       BUNDLE_GEMFILE: "${{ matrix.gemfile }}"
