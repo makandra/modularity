@@ -10,6 +10,13 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 ### Compatible changes
 
 
+## 3.1.0 - 2022-06-01
+
+### Compatible changes
+
+- Add support for separation of positional and keyword arguments in ruby 3
+
+
 ## 3.0.1 - 2022-03-09
 
 ### Compatible changes
