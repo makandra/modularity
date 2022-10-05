@@ -13,7 +13,7 @@ in a way that is less awkward than using modules.
 
 Add the following to your `Gemfile`:
 
-```
+```ruby
 gem 'modularity'
 ```
 
@@ -32,7 +32,7 @@ and macros.
 
 Here is an example of a `strip_field` macro, which created setter methods that remove leading and trailing whitespace from newly assigned values:
 
-```
+```ruby
 # app/models/article.rb
 class Article < ActiveRecord::Base
   include DoesStripFields[:name, :brand]
@@ -61,7 +61,7 @@ Using a module to add both instance methods and class methods is
 [very awkward](http://redcorundum.blogspot.com/2006/06/mixing-in-class-methods.html).
 Modularity does away with the clutter and lets you say this:
 
-```
+```ruby
 # app/models/model.rb
 class Model
   include Mixin
@@ -88,7 +88,7 @@ Models are often concerned with multiple themes like "authentication", "contact 
 a couple of validations and callbacks here, and some method there. Modularity lets you organize your model into multiple
 partial classes, so each file can deal with a single aspect of your model:
 
-```
+```ruby
 # app/models/user.rb
 class User < ActiveRecord::Base
   include DoesAuthentication
