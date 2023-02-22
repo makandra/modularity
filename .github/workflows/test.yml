@@ -24,6 +24,8 @@ jobs:
           gemfile: Gemfile
         - ruby: 3.1.2
           gemfile: Gemfile
+        - ruby: 3.2.1
+          gemfile: Gemfile
     env:
       BUNDLE_GEMFILE: "${{ matrix.gemfile }}"
     steps:
