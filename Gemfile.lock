@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    modularity (3.1.0)
+    modularity (3.2.0)
 
 GEM
   remote: http://rubygems.org/
