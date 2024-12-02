@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="62.594978mm"
+   height="14.056225mm"
+   viewBox="0 0 62.594977 14.056225"
+   version="1.1"
+   id="svg838"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
+   sodipodi:docname="logo.dark.shapes.svg"
+   inkscape:export-filename="/home/henning/Projects/capybara-lockstep/media/capybara-lockstep.dark.png"
+   inkscape:export-xdpi="196"
+   inkscape:export-ydpi="196">
+  <defs
+     id="defs832">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient1406">
+      <stop
+         style="stop-color:#ff0844;stop-opacity:1"
+         offset="0"
+         id="stop1402" />
+      <stop
+         style="stop-color:#ffb199;stop-opacity:1"
+         offset="1"
+         id="stop1404" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1406"
+       id="linearGradient1408"
+       x1="22.054907"
+       y1="91.071762"
+       x2="88.956696"
+       y2="91.071762"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.93563914,0,0,0.08820435,-20.635435,57.908781)" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.979899"
+     inkscape:cx="-29.72087"
+     inkscape:cy="-38.835439"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="2560"
+     inkscape:window-height="1391"
+     inkscape:window-x="1920"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:pagecheckerboard="true" />
+  <metadata
+     id="metadata835">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-52.518951)">
+    <g
+       aria-label="MODULARITY"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:'League Spartan';-inkscape-font-specification:'League Spartan';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       id="text1385">
+      <path
+         d="m 7.6041248,52.645951 v 6.985 H 6.0272082 v -4.111625 l 0.068792,-1.169458 -0.269875,1.338791 -1.1747499,3.381375 H 3.1009166 l -1.1694583,-3.381375 -0.2645834,-1.338791 0.068792,1.169458 v 4.111625 H 0.15345833 v -6.985 H 2.3759583 l 1.4075833,4.661958 0.09525,0.555625 0.09525,-0.555625 1.4075833,-4.661958 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'League Spartan';-inkscape-font-specification:'League Spartan';fill:#ffffff;fill-opacity:1;stroke-width:0.26458332"
+         id="path822" />
+      <path
+         d="m 10.286985,56.133159 q 0,0.597959 0.243416,1.084792 0.248709,0.481542 0.682625,0.767292 0.439209,0.28575 1.016,0.28575 0.576792,0 1.010709,-0.28575 0.439208,-0.28575 0.682625,-0.767292 0.248708,-0.486833 0.248708,-1.084792 0,-0.597958 -0.248708,-1.0795 -0.243417,-0.481541 -0.682625,-0.767291 -0.433917,-0.291042 -1.010709,-0.291042 -0.576791,0 -1.016,0.291042 -0.433916,0.28575 -0.682625,0.767291 -0.243416,0.481542 -0.243416,1.0795 z m -1.6457085,0 q 0,-0.762 0.269875,-1.418166 0.269875,-0.661459 0.7567083,-1.153584 0.4868332,-0.492125 1.1430002,-0.767291 0.656166,-0.275167 1.418166,-0.275167 0.772584,0 1.423459,0.275167 0.656166,0.275166 1.137708,0.767291 0.486833,0.492125 0.751417,1.153584 0.269875,0.656166 0.269875,1.418166 0,0.767292 -0.259292,1.42875 -0.259292,0.656167 -0.740833,1.153584 -0.481542,0.492125 -1.137709,0.767291 -0.656166,0.275167 -1.444625,0.275167 -0.804333,0 -1.465791,-0.275167 -0.656167,-0.275166 -1.1324169,-0.767291 -0.47625,-0.497417 -0.7355416,-1.153584 -0.254,-0.661458 -0.254,-1.42875 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'League Spartan';-inkscape-font-specification:'League Spartan';fill:#ffffff;fill-opacity:1;stroke-width:0.26458332"
+         id="path824" />
+      <path
+         d="m 16.73222,52.645951 h 2.100792 q 1.116541,0 1.846791,0.449792 0.735542,0.4445 1.100667,1.232958 0.365125,0.788458 0.365125,1.804458 0,1.021292 -0.365125,1.80975 -0.365125,0.788459 -1.100667,1.23825 -0.73025,0.449792 -1.846791,0.449792 H 16.73222 Z m 1.576917,1.402292 v 4.180416 h 0.381 q 0.597958,0 0.989541,-0.269875 0.391584,-0.275166 0.587375,-0.746125 0.201084,-0.47625 0.201084,-1.068916 0,-0.597959 -0.195792,-1.068917 -0.1905,-0.47625 -0.587375,-0.751417 -0.396875,-0.275166 -0.994833,-0.275166 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'League Spartan';-inkscape-font-specification:'League Spartan';fill:#ffffff;fill-opacity:1;stroke-width:0.26458332"
+         id="path826" />
+      <path
+         d="m 27.109159,52.645951 h 1.582208 v 4.291542 q 0,0.862541 -0.338667,1.497541 -0.338666,0.629709 -0.968375,0.978959 -0.629708,0.343958 -1.502833,0.343958 -0.878416,0 -1.513416,-0.343958 -0.635,-0.34925 -0.973667,-0.978959 -0.333375,-0.635 -0.333375,-1.497541 v -4.291542 h 1.576917 v 4.206875 q 0,0.47625 0.148166,0.804333 0.153459,0.328084 0.433917,0.497417 0.280458,0.164042 0.661458,0.164042 0.375709,0 0.650875,-0.164042 0.275167,-0.169333 0.423333,-0.497417 0.153459,-0.328083 0.153459,-0.804333 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'League Spartan';-inkscape-font-specification:'League Spartan';fill:#ffffff;fill-opacity:1;stroke-width:0.26458332"
+         id="path828" />
+      <path
+         d="m 29.850237,52.645951 h 1.582208 v 5.598583 h 2.534708 v 1.386417 h -4.116916 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'League Spartan';-inkscape-font-specification:'League Spartan';fill:#ffffff;fill-opacity:1;stroke-width:0.26458332"
+         id="path830" />
+      <path
+         d="m 37.258568,52.645951 h 1.571625 l 2.756958,6.985 h -1.688042 l -0.508,-1.402292 h -2.688166 l -0.513292,1.402292 h -1.693333 z m -0.02646,4.196292 h 1.635125 l -0.809625,-2.291292 h -0.01588 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'League Spartan';-inkscape-font-specification:'League Spartan';fill:#ffffff;fill-opacity:1;stroke-width:0.26458332"
+         id="path832" />
+      <path
+         d="m 42.111013,52.645951 h 2.846917 q 0.608542,0 1.084791,0.254 0.47625,0.254 0.751417,0.735542 0.280458,0.47625 0.280458,1.137708 0,0.661458 -0.238125,1.084792 -0.232833,0.418041 -0.560916,0.629708 -0.328084,0.206375 -0.608542,0.248708 l 1.698625,2.894542 h -1.778 l -1.513416,-2.772833 h -0.381 v 2.772833 h -1.582209 z m 1.582209,3.116792 h 0.6985 q 0.423333,0 0.740833,-0.206375 0.3175,-0.206375 0.3175,-0.73025 0,-0.523875 -0.312208,-0.724959 -0.312209,-0.206375 -0.735542,-0.206375 h -0.709083 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'League Spartan';-inkscape-font-specification:'League Spartan';fill:#ffffff;fill-opacity:1;stroke-width:0.26458332"
+         id="path834" />
+      <path
+         d="m 48.461008,52.645951 h 1.582208 v 6.985 h -1.582208 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'League Spartan';-inkscape-font-specification:'League Spartan';fill:#ffffff;fill-opacity:1;stroke-width:0.26458332"
+         id="path836" />
+      <path
+         d="m 52.482641,54.032368 h -1.666875 v -1.386417 h 4.910667 v 1.386417 h -1.661584 v 5.598583 h -1.582208 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'League Spartan';-inkscape-font-specification:'League Spartan';fill:#ffffff;fill-opacity:1;stroke-width:0.26458332"
+         id="path838" />
+      <path
+         d="m 58.615645,57.117409 -2.407708,-4.471458 h 1.920875 l 1.275292,2.661708 1.280583,-2.661708 h 1.910292 l -2.397125,4.471458 v 2.513542 h -1.582209 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'League Spartan';-inkscape-font-specification:'League Spartan';fill:#ffffff;fill-opacity:1;stroke-width:0.26458332"
+         id="path840" />
+    </g>
+    <rect
+       style="fill:url(#linearGradient1408);fill-opacity:1;stroke:none;stroke-width:0.02872758;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1387"
+       width="62.595924"
+       height="1.2668874"
+       x="-3.5527137e-15"
+       y="65.308289" />
+  </g>
+</svg>

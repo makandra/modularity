@@ -1,6 +1,20 @@
-[![Tests](https://github.com/makandra/modularity/workflows/Tests/badge.svg)](https://github.com/makandra/modularity/actions)
+<p>
+  <a href="https://makandra.de/">
+    <picture>
+      <source media="(prefers-color-scheme: light)" srcset="media/makandra-with-bottom-margin.light.svg">
+      <source media="(prefers-color-scheme: dark)" srcset="media/makandra-with-bottom-margin.dark.svg">
+      <img align="right" width="25%" alt="makandra" src="media/makandra-with-bottom-margin.light.svg">
+    </picture>
+  </a>
 
-# Modularity - Traits and partial classes for Ruby
+  <picture>
+    <source media="(prefers-color-scheme: light)" srcset="media/logo.light.shapes.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="media/logo.dark.shapes.svg">
+    <img width="245" alt="Modularity" role="heading" aria-level="1" src="media/logo.light.shapes.svg">
+  </picture>
+</p>
+
+[![Tests](https://github.com/makandra/modularity/workflows/Tests/badge.svg)](https://github.com/makandra/modularity/actions)
 
 Modularity enhances Ruby's [`Module`](http://apidock.com/ruby/Module) so it can be used traits and partial classes.
 This allows very simple definition of meta-programming macros like the
