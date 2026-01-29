@@ -114,7 +114,7 @@ Some criticism has been raised for splitting large models into files like this.
 Essentially, even though have an easier time navigating your code, you will still
 have one giant model with many side effects.
 
-There are [many better ways](http://blog.codeclimate.com/blog/2012/10/17/7-ways-to-decompose-fat-activerecord-models/)
+There are [many better ways](https://codeclimate.com/blog/7-ways-to-decompose-fat-activerecord-models)
 to decompose a huge Ruby class.
 
 ## Development
