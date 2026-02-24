@@ -14,6 +14,7 @@ jobs:
       fail-fast: false
       matrix:
         include:
+        # Legacy - If a version breaks, just drop it, don't fix it.
         - ruby: 2.5.7
           gemfile: Gemfile
         - ruby: 2.6.10
@@ -24,11 +25,15 @@ jobs:
           gemfile: Gemfile
         - ruby: 3.1.2
           gemfile: Gemfile
+
+        # Officially supported
         - ruby: 3.2.1
           gemfile: Gemfile
         - ruby: 3.3.6
           gemfile: Gemfile
         - ruby: 3.4.1
+          gemfile: Gemfile
+        - ruby: 4.0.1
           gemfile: Gemfile
     env:
       BUNDLE_GEMFILE: "${{ matrix.gemfile }}"
